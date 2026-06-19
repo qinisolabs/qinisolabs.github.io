@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Qiniso — verified, trustworthy data tools for AI agents</title>
+<meta name="description" content="Qiniso builds small, open-source MCP servers and TypeScript libraries that verify the structured facts AI agents emit — checksums, official codes, and curated government data — against authoritative sources. Verified answers, or an honest 'not found', never a guess." />
+<link rel="icon" href="logo.svg" type="image/svg+xml" />
+<style>
+  :root { --emerald:#10b981; --emerald-dark:#047857; --ink:#0b1220; --muted:#5b6472; --bg:#fff; --card:#f6f8f7; --line:#e3e8e5; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); }
+  .wrap { max-width:960px; margin:0 auto; padding:0 24px; }
+  header { padding:80px 0 44px; text-align:center; }
+  .logo { width:92px; height:92px; }
+  h1 { font-size:3rem; margin:18px 0 6px; letter-spacing:-0.02em; }
+  .tag { font-size:1.25rem; color:var(--emerald-dark); font-weight:600; margin:0 0 14px; }
+  .lede { font-size:1.13rem; color:var(--muted); max-width:680px; margin:0 auto 22px; }
+  .zulu { color:var(--muted); font-style:italic; }
+  section { padding:38px 0; border-top:1px solid var(--line); }
+  h2 { font-size:1.5rem; letter-spacing:-0.01em; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-top:20px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; display:flex; flex-direction:column; }
+  .card h3 { margin:0 0 2px; font-size:1.18rem; }
+  .card .sub { color:var(--emerald-dark); font-size:0.82rem; font-weight:600; text-transform:uppercase; letter-spacing:0.03em; margin-bottom:8px; }
+  .card p { margin:0 0 14px; color:var(--muted); font-size:0.95rem; flex:1; }
+  .links { display:flex; gap:14px; flex-wrap:wrap; font-size:0.9rem; font-weight:600; }
+  .links a { color:var(--emerald-dark); text-decoration:none; }
+  .links a:hover { text-decoration:underline; }
+  .feature { border:2px solid var(--emerald); }
+  code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; background:#eef2f0; padding:1px 6px; border-radius:6px; font-size:0.85rem; }
+  .note { color:var(--muted); }
+  footer { color:var(--muted); font-size:0.9rem; text-align:center; padding:44px 0 72px; border-top:1px solid var(--line); }
+  a { color:var(--emerald-dark); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="logo" src="logo.svg" alt="Qiniso" />
+    <h1>Qiniso</h1>
+    <p class="tag">Verified, trustworthy data tools for AI agents.</p>
+    <p class="lede">LLMs guess at structured facts — checksums, codes, registry data — and state the guess with full confidence. Qiniso builds small, open-source <strong>MCP servers</strong> (and typed TypeScript libraries) that check those facts against <strong>authoritative sources</strong>. Verified answers, or an honest "not found" — never a fabrication.</p>
+    <p class="zulu">"Qiniso" means "truth" in Zulu.</p>
+  </header>
+
+  <section>
+    <h2>The tools</h2>
+    <p class="note">All free, open source, no API key. Each is both an MCP server (<code>npx</code> / hosted) and an importable library.</p>
+    <div class="grid">
+
+      <div class="card feature">
+        <div class="sub">Verify · the umbrella</div>
+        <h3>qiniso</h3>
+        <p>47 deterministic fact-checkers in one server — IBAN, VAT, VIN, GTIN/UPC/EAN barcodes, national &amp; tax IDs, crypto addresses, phone numbers, dates, holidays and more. Verify the structured facts an agent emits against checksums and curated reference data.</p>
+        <div class="links">
+          <a href="https://www.npmjs.com/package/@qinisolabs/qiniso">npm</a>
+          <a href="https://qinisolabs.github.io/qiniso/">site</a>
+          <a href="https://qiniso.qinisolabs.workers.dev/mcp">hosted MCP</a>
+          <a href="https://github.com/qinisolabs/qiniso">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="sub">Data · time</div>
+        <h3>bizdays</h3>
+        <p>Business-day &amp; public-holiday calculations for 200+ countries — add/count working days, find the next business day, country-correct weekend rules.</p>
+        <div class="links">
+          <a href="https://www.npmjs.com/package/@qinisolabs/bizdays">npm</a>
+          <a href="https://bizdays.qinisolabs.workers.dev/mcp">hosted MCP</a>
+          <a href="https://github.com/qinisolabs/bizdays">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="sub">Data · health</div>
+        <h3>icdwise</h3>
+        <p>Verified ICD-10-CM medical code lookup, validation and reverse search — official descriptions for ~74k codes, or an honest "not found". Never a guessed code.</p>
+        <div class="links">
+          <a href="https://www.npmjs.com/package/icdwise">npm</a>
+          <a href="https://qinisolabs.github.io/icdwise/">site</a>
+          <a href="https://icdwise.qinisolabs.workers.dev/mcp">hosted MCP</a>
+          <a href="https://github.com/qinisolabs/icdwise">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="sub">Data · UK property</div>
+        <h3>floodwise</h3>
+        <p>England flood-risk by postcode from official Environment Agency data — the long-term risk band (High/Medium/Low/Very Low), or an honest "not found" outside England.</p>
+        <div class="links">
+          <a href="https://www.npmjs.com/package/floodwise">npm</a>
+          <a href="https://qinisolabs.github.io/floodwise/">site</a>
+          <a href="https://github.com/qinisolabs/floodwise">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="sub">Data · UK companies</div>
+        <h3>companieswise</h3>
+        <p>UK company lookup over 5.7M Companies House records — official name, status, type, incorporation date and SIC by company number, or a clean "not found".</p>
+        <div class="links">
+          <a href="https://www.npmjs.com/package/companieswise">npm</a>
+          <a href="https://qinisolabs.github.io/companieswise/">site</a>
+          <a href="https://github.com/qinisolabs/companieswise">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="sub">Data · UK compliance</div>
+        <h3>sanctionwise</h3>
+        <p>UK sanctions screening against the official FCDO UK Sanctions List — ranked possible matches with the official designation details, or a clean no-match. Indicative, with the caveats attached.</p>
+        <div class="links">
+          <a href="https://www.npmjs.com/package/sanctionwise">npm</a>
+          <a href="https://qinisolabs.github.io/sanctionwise/">site</a>
+          <a href="https://github.com/qinisolabs/sanctionwise">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <p><strong>Open core.</strong> The tools are free and open source for adoption; the moat is curated, maintained, authoritative data — kept current automatically (most refresh themselves from the official source). Each tool is deliberately small, does one thing, and is honest about its limits: it returns the verified fact, or "not found", and never invents an answer.</p>
+    <p class="note">Built on the Model Context Protocol, so any MCP-compatible agent can use them. Every tool is also a plain TypeScript library — <code>npm install</code> and import.</p>
+  </section>
+</div>
+
+<footer>
+  Qiniso — verified, trustworthy data tools for AI agents.<br />
+  Open source · <a href="https://github.com/qinisolabs">github.com/qinisolabs</a> ·
+  <a href="https://www.npmjs.com/org/qinisolabs">npm</a>
+</footer>
+</body>
+</html>

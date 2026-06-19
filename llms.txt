@@ -1,0 +1,22 @@
+# Qiniso
+
+> Verified, trustworthy data tools for AI agents. Qiniso builds small, open-source MCP servers (and
+> typed TypeScript libraries) that check the structured facts an AI agent emits — checksums, official
+> codes, registry and government data — against authoritative sources. Verified answers, or an honest
+> "not found", never a guess. Free, open source, no API key. "Qiniso" means "truth" in Zulu.
+
+## Tools
+- qiniso: 47 deterministic fact-checkers in one MCP server — IBAN, VAT, VIN, GTIN/UPC/EAN barcodes, national & tax IDs, crypto addresses, phone, dates, holidays. npm @qinisolabs/qiniso · hosted https://qiniso.qinisolabs.workers.dev/mcp
+- bizdays: business-day & public-holiday calculations for 200+ countries. npm @qinisolabs/bizdays · hosted https://bizdays.qinisolabs.workers.dev/mcp
+- icdwise: verified ICD-10-CM medical code lookup/validation/search (~74k codes). npm icdwise · hosted https://icdwise.qinisolabs.workers.dev/mcp
+- floodwise: England flood-risk by postcode (Environment Agency, OGL). npm floodwise
+- companieswise: UK company lookup over 5.7M Companies House records. npm companieswise
+- sanctionwise: UK sanctions screening against the official FCDO UK Sanctions List (indicative). npm sanctionwise
+
+## Model
+Open core: tools free/open-source for adoption; the moat is curated, maintained, authoritative data kept current automatically. Built on the Model Context Protocol; each is also a plain TypeScript library.
+
+## Links
+- Website: https://qinisolabs.github.io/
+- GitHub org: https://github.com/qinisolabs
+- npm org: https://www.npmjs.com/org/qinisolabs
