@@ -27,10 +27,14 @@
   .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; display:flex; flex-direction:column; }
   .card h3 { margin:0 0 2px; font-size:1.18rem; }
   .card .sub { color:var(--emerald-dark); font-size:0.82rem; font-weight:600; text-transform:uppercase; letter-spacing:0.03em; margin-bottom:8px; }
-  .card p { margin:0 0 14px; color:var(--muted); font-size:0.95rem; flex:1; }
-  .links { display:flex; gap:14px; flex-wrap:wrap; font-size:0.9rem; font-weight:600; }
-  .links a { color:var(--emerald-dark); text-decoration:none; }
-  .links a:hover { text-decoration:underline; }
+  .card p { margin:0 0 16px; color:var(--muted); font-size:0.95rem; flex:1; }
+  .foot { margin-top:auto; }
+  .install { display:inline-flex; align-items:center; gap:7px; padding:8px 15px; border-radius:9px; background:linear-gradient(135deg,var(--emerald),var(--emerald-dark)); color:#fff; font-size:0.87rem; font-weight:600; text-decoration:none; }
+  .install:hover { opacity:0.92; }
+  .install svg { display:block; }
+  .meta { display:flex; gap:14px; flex-wrap:wrap; margin-top:12px; font-size:0.84rem; }
+  .meta a { color:var(--muted); text-decoration:none; font-weight:500; }
+  .meta a:hover { color:var(--emerald-dark); text-decoration:underline; }
   .feature { border:2px solid var(--emerald); }
   code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; background:#eef2f0; padding:1px 6px; border-radius:6px; font-size:0.85rem; }
   .note { color:var(--muted); }
@@ -50,19 +54,21 @@
 
   <section>
     <h2>The tools</h2>
-    <p class="note">All free, open source, no API key. Each is both an MCP server (<code>npx</code> / hosted) and an importable library.</p>
+    <p class="note">All free and open source. Each is an MCP server — install in one click, paste a hosted URL, or run via <code>npx</code> — and also a typed TypeScript library.</p>
     <div class="grid">
 
       <div class="card feature">
         <div class="sub">Verify · the umbrella</div>
         <h3>qiniso</h3>
-        <p>47 deterministic fact-checkers in one server — IBAN, VAT, VIN, GTIN/UPC/EAN barcodes, national &amp; tax IDs, crypto addresses, phone numbers, dates, holidays and more. Verify the structured facts an agent emits against checksums and curated reference data.</p>
-        <div class="links">
-          <a href="https://www.npmjs.com/package/@qinisolabs/qiniso">npm</a>
-          <a href="https://qinisolabs.github.io/qiniso/">site</a>
-          <a href="https://qiniso.qinisolabs.workers.dev/mcp">hosted MCP</a>
-          <a href="https://github.com/qinisolabs/qiniso/releases/latest/download/qiniso.mcpb">1-click install</a>
-          <a href="https://github.com/qinisolabs/qiniso">GitHub</a>
+        <p>56 deterministic fact-checkers in one server — IBAN, VAT, VIN, GTIN/UPC/EAN barcodes, national &amp; tax IDs, crypto addresses, phone numbers, dates, holidays and more. Verify the structured facts an agent emits against checksums and curated reference data.</p>
+        <div class="foot">
+          <a class="install" href="https://github.com/qinisolabs/qiniso/releases/latest/download/qiniso.mcpb"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 21h16"/></svg>1-click install</a>
+          <div class="meta">
+            <a href="https://qiniso.qinisolabs.workers.dev/mcp">Hosted</a>
+            <a href="https://qinisolabs.github.io/qiniso/">Site</a>
+            <a href="https://www.npmjs.com/package/@qinisolabs/qiniso">npm</a>
+            <a href="https://github.com/qinisolabs/qiniso">GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -70,12 +76,14 @@
         <div class="sub">Data · time</div>
         <h3>bizdays</h3>
         <p>Business-day &amp; public-holiday calculations for 200+ countries — add/count working days, find the next business day, country-correct weekend rules.</p>
-        <div class="links">
-          <a href="https://www.npmjs.com/package/@qinisolabs/bizdays">npm</a>
-          <a href="https://qinisolabs.github.io/bizdays/">site</a>
-          <a href="https://bizdays.qinisolabs.workers.dev/mcp">hosted MCP</a>
-          <a href="https://github.com/qinisolabs/bizdays/releases/latest/download/bizdays.mcpb">1-click install</a>
-          <a href="https://github.com/qinisolabs/bizdays">GitHub</a>
+        <div class="foot">
+          <a class="install" href="https://github.com/qinisolabs/bizdays/releases/latest/download/bizdays.mcpb"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 21h16"/></svg>1-click install</a>
+          <div class="meta">
+            <a href="https://bizdays.qinisolabs.workers.dev/mcp">Hosted</a>
+            <a href="https://qinisolabs.github.io/bizdays/">Site</a>
+            <a href="https://www.npmjs.com/package/@qinisolabs/bizdays">npm</a>
+            <a href="https://github.com/qinisolabs/bizdays">GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -83,12 +91,14 @@
         <div class="sub">Data · health</div>
         <h3>icdwise</h3>
         <p>Verified ICD-10-CM medical code lookup, validation and reverse search — official descriptions for ~74k codes, or an honest "not found". Never a guessed code.</p>
-        <div class="links">
-          <a href="https://www.npmjs.com/package/icdwise">npm</a>
-          <a href="https://qinisolabs.github.io/icdwise/">site</a>
-          <a href="https://icdwise.qinisolabs.workers.dev/mcp">hosted MCP</a>
-          <a href="https://github.com/qinisolabs/icdwise/releases/latest/download/icdwise.mcpb">1-click install</a>
-          <a href="https://github.com/qinisolabs/icdwise">GitHub</a>
+        <div class="foot">
+          <a class="install" href="https://github.com/qinisolabs/icdwise/releases/latest/download/icdwise.mcpb"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 21h16"/></svg>1-click install</a>
+          <div class="meta">
+            <a href="https://icdwise.qinisolabs.workers.dev/mcp">Hosted</a>
+            <a href="https://qinisolabs.github.io/icdwise/">Site</a>
+            <a href="https://www.npmjs.com/package/icdwise">npm</a>
+            <a href="https://github.com/qinisolabs/icdwise">GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -96,11 +106,13 @@
         <div class="sub">Data · UK property</div>
         <h3>floodwise</h3>
         <p>England flood-risk by postcode from official Environment Agency data — the long-term risk band (High/Medium/Low/Very Low), or an honest "not found" outside England.</p>
-        <div class="links">
-          <a href="https://www.npmjs.com/package/floodwise">npm</a>
-          <a href="https://qinisolabs.github.io/floodwise/">site</a>
-          <a href="https://github.com/qinisolabs/floodwise/releases/latest/download/floodwise.mcpb">1-click install</a>
-          <a href="https://github.com/qinisolabs/floodwise">GitHub</a>
+        <div class="foot">
+          <a class="install" href="https://github.com/qinisolabs/floodwise/releases/latest/download/floodwise.mcpb"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 21h16"/></svg>1-click install</a>
+          <div class="meta">
+            <a href="https://qinisolabs.github.io/floodwise/">Site</a>
+            <a href="https://www.npmjs.com/package/floodwise">npm</a>
+            <a href="https://github.com/qinisolabs/floodwise">GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -108,11 +120,13 @@
         <div class="sub">Data · UK companies</div>
         <h3>companieswise</h3>
         <p>UK company lookup over 5.7M Companies House records — official name, status, type, incorporation date and SIC by company number, or a clean "not found". Monthly snapshot by default, or real-time with a free Companies House API key.</p>
-        <div class="links">
-          <a href="https://www.npmjs.com/package/companieswise">npm</a>
-          <a href="https://qinisolabs.github.io/companieswise/">site</a>
-          <a href="https://github.com/qinisolabs/companieswise/releases/latest/download/companieswise.mcpb">1-click install</a>
-          <a href="https://github.com/qinisolabs/companieswise">GitHub</a>
+        <div class="foot">
+          <a class="install" href="https://github.com/qinisolabs/companieswise/releases/latest/download/companieswise.mcpb"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 21h16"/></svg>1-click install</a>
+          <div class="meta">
+            <a href="https://qinisolabs.github.io/companieswise/">Site</a>
+            <a href="https://www.npmjs.com/package/companieswise">npm</a>
+            <a href="https://github.com/qinisolabs/companieswise">GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -120,12 +134,14 @@
         <div class="sub">Data · UK compliance</div>
         <h3>sanctionwise</h3>
         <p>UK sanctions screening against the official FCDO UK Sanctions List — ranked possible matches with the official designation details, or a clean no-match. Indicative, with the caveats attached.</p>
-        <div class="links">
-          <a href="https://www.npmjs.com/package/sanctionwise">npm</a>
-          <a href="https://qinisolabs.github.io/sanctionwise/">site</a>
-          <a href="https://sanctionwise.qinisolabs.workers.dev/mcp">hosted MCP</a>
-          <a href="https://github.com/qinisolabs/sanctionwise/releases/latest/download/sanctionwise.mcpb">1-click install</a>
-          <a href="https://github.com/qinisolabs/sanctionwise">GitHub</a>
+        <div class="foot">
+          <a class="install" href="https://github.com/qinisolabs/sanctionwise/releases/latest/download/sanctionwise.mcpb"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 21h16"/></svg>1-click install</a>
+          <div class="meta">
+            <a href="https://sanctionwise.qinisolabs.workers.dev/mcp">Hosted</a>
+            <a href="https://qinisolabs.github.io/sanctionwise/">Site</a>
+            <a href="https://www.npmjs.com/package/sanctionwise">npm</a>
+            <a href="https://github.com/qinisolabs/sanctionwise">GitHub</a>
+          </div>
         </div>
       </div>
 
